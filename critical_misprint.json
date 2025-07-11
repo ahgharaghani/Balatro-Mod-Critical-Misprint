@@ -1,0 +1,17 @@
+{
+	"id": "critical_misprint",
+	"name": "Critical Misprint Joker",
+	"author": ["Qareh"],
+	"description": "An alternative to the vanilla Misprint joker card.",
+	"prefix": "critmsprt",
+	"main_file": "critmprt.lua", 
+	"priority": -20, 
+	"badge_colour": "58111A",
+	"badge_text_colour": "fdd77a",
+	"display_name": "CM",
+	"version": "0.1.0",
+	"dependencies": [
+		"Steamodded (>=1.*)", 
+		"Lovely (>=0.6)"
+	]
+}
