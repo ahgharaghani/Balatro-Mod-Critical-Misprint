@@ -1,0 +1,9 @@
+JokerKey = "Critical Misprint"
+AtlasLoc = "crit_misprt"
+PostiveMax = 35
+PostiveMin = 30
+NegativeMax = -5
+NegativeMin = 0
+NegativityWeight = 0.7
+JokerRarity = 2
+JokerCost = 6

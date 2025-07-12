@@ -1,9 +1,9 @@
 local function weightenedRandom(nmin, nmax, pmin, pmax)
     local r = math.random()
-    --higher chance of 0.9 to gain a negative mult (between nmin to nmax)
-    if r <= 0.9 then
+    --higher chance to gain a negative mult (between nmin to nmax)
+    if r <= NegativityWeight then
         return math.random(nmin, nmax)
-    --lesser chance of 0.1 to gain a positive high mult (between pmin to pmax)
+    --lesser chance to gain a positive high mult (between pmin to pmax)
     else
         return math.random(pmin, pmax)
     end
@@ -17,21 +17,21 @@ SMODS.Atlas {
 }
 
 SMODS.Joker {
-    key = "Critical Misprint",
-    atlas = "crit_misprt",
+    key = JokerKey,
+    atlas = AtlasLoc,
     config = {
         extra = {
-            pmax = 35,
-            pmin = 30,
-            nmax = -5,
-            nmin = 0,
+            pmax = PostiveMax,
+            pmin = PostiveMin,
+            nmax = NegativeMax,
+            nmin = NegativeMin,
             intmult = 0 --initial value and the internal var used for local usage(to avoid interferance with mult var used globally by the framework)
         }
     },
     unlocked = true,
     discovered = true,
-    rarity = 2,
-    cost = 6,
+    rarity = JokerRarity,
+    cost = JokerCost,
     loc_vars = function(self, info_queue, card)
         local r_mults ={}
         for i = card.ability.extra.nmax, card.ability.extra.nmin do
